@@ -14,7 +14,13 @@ func InitOauth2Config() {
 		ClientSecret: spotifyapi.ClientSecret,
 		Endpoint:     spotify.Endpoint,
 		RedirectURL:  "https://localhost:5000/callback/",
-		Scopes:       []string{"user-read-email", "user-read-private", "user-modify-playback-state"},
+		Scopes: []string{
+			"user-read-email",
+			"user-read-private",
+			"user-modify-playback-state",
+			"playlist-read-private",
+			"playlist-read-collaborative",
+		},
 	}
 
 	Config = config
