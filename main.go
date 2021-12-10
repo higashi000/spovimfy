@@ -12,5 +12,5 @@ func main() {
 
 	e := router.NewRouter()
 
-	e.Logger.Fatal(e.Start(":5000"))
+	e.Logger.Fatal(e.StartTLS(":5000", "cert.pem", "key.pem"))
 }
